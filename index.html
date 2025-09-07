@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+     <button id="darkModeToggle">🌙</button>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-image">
+        <img src="images/profileportfolio.jpg" alt="Profile Picture" width="50" length="50">
+      </div>
+      <div class="hero-text">
+        <h1>Hi, I'm Raymond Jay Mondres</h1>
+        <p>3rd Year Computer Science Student</p>
+        <a href="#projects" class="btn">View my work</a>
+      </div>
+    </div>
+  
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hi! I’m Raymond Jay, a 3rd Year Computer Science student with a strong passion 
+      for game development, 3D modelling, and machine learning. 
+      I enjoy building projects that combine creativity and problem-solving, 
+      whether it’s designing interactive games or exploring intelligent systems that learn from data.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project">
+        <img src="images/projects1.jpg" alt="Metanoia App">
+        <p>Metanoia App</p>
+      </div>
+      <div class="project">
+        <img src="images/projects2.png" alt="Bomber Multiplayer Game Demo">
+        <p>Bomber Multiplayer Game Demo</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>🚪Backend Development (API design, databases, system architecture)🚪</li>
+      <li>🎮Game Development (logic design, interactivity)🎮</li>
+      <li>🤖Machine Learning (data preprocessing, model building, experimentation)🤖</li>
+      <li>🧊3D Modeling (assets, environments, character design basics)🧊</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📧 Email: <a href="mailto:raymond.mondres@carsu.edu.ph">raymond.mondres@carsu.edu.ph</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Raymond Jay Mondres. All rights reserved.</p>
+  </footer>
+
+</body>
+<script>
+  const toggle = document.getElementById("darkModeToggle");
+  const body = document.body;
+
+  toggle.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+    if (body.classList.contains("dark-mode")) {
+      toggle.textContent = "☀️";
+    } else {
+      toggle.textContent = "🌙";
+    }
+  });
+</script>
+
+</html>
