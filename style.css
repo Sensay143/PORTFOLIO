@@ -201,7 +201,7 @@ footer {
   display: inline-block;
   margin-top: 15px;
   padding: 12px 24px;
-  background: #007acc;
+  background: #2c4457;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
@@ -210,14 +210,15 @@ footer {
 }
 
 .contact-btn:hover {
-  background: #005fa3;
+  background: #2c4457;
   transform: scale(1.05);
 }
 
 .contact-btn:active {
-  background: #00457a;
+  background: #2c4457;
   transform: scale(0.95);
 }
+
 
 
 
