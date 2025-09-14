@@ -197,5 +197,27 @@ footer {
   background: #2c4457;
 }
 
+.contact-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 24px;
+  background: #007acc;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-btn:hover {
+  background: #005fa3;
+  transform: scale(1.05);
+}
+
+.contact-btn:active {
+  background: #00457a;
+  transform: scale(0.95);
+}
+
 
 
