@@ -1,37 +1,28 @@
-const toggle = document.getElementById("darkModeToggle");
-    const body = document.body;
+const darkModeToggle = document.getElementById("darkModeToggle");
+darkModeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+  darkModeToggle.textContent =
+    document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+});
 
-    if (localStorage.getItem("theme") === "dark") {
-      body.classList.add("dark-mode");
-      toggle.textContent = "☀️";
-    }
 
-    toggle.addEventListener("click", () => {
-      body.classList.toggle("dark-mode");
-      if (body.classList.contains("dark-mode")) {
-        toggle.textContent = "☀️";
-        localStorage.setItem("theme", "dark");
-      } else {
-        toggle.textContent = "🌙";
-        localStorage.setItem("theme", "light");
-      }
-    });
+const aboutSection = document.querySelector("#about p");
+const editButton = document.createElement("button");
+editButton.textContent = "Edit";
+editButton.style.marginTop = "10px";
+aboutSection.insertAdjacentElement("afterend", editButton);
 
-    const editBtn = document.getElementById("editBtn");
-    const aboutText = document.getElementById("aboutText");
+let editing = false;
 
-    if (localStorage.getItem("aboutMe")) {
-      aboutText.textContent = localStorage.getItem("aboutMe");
-    }
-
-    editBtn.addEventListener("click", () => {
-      if (aboutText.isContentEditable) {
-        aboutText.contentEditable = "false";
-        editBtn.textContent = "Edit";
-        localStorage.setItem("aboutMe", aboutText.textContent);
-      } else {
-        aboutText.contentEditable = "true";
-        aboutText.focus();
-        editBtn.textContent = "Save";
-      }
-    });
+editButton.addEventListener("click", () => {
+  if (!editing) {
+    aboutSection.setAttribute("contenteditable", "true");
+    aboutSection.focus();
+    editButton.textContent = "Save";
+    editing = true;
+  } else {
+    aboutSection.setAttribute("contenteditable", "false");
+    editButton.textContent = "Edit";
+    editing = false;
+  }
+});
